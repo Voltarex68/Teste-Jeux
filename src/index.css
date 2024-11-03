@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+@keyframes run {
+  0%, 100% { transform: rotate(30deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+@layer utilities {
+  .animate-jump {
+    animation: jump 0.5s ease-in-out;
+  }
+  
+  .animate-idle {
+    animation: swing 2s ease-in-out infinite;
+  }
+  
+  .animate-swing {
+    animation: swing 1s ease-in-out infinite;
+  }
+  
+  .animate-swing-reverse {
+    animation: swing 1s ease-in-out infinite reverse;
+  }
+  
+  .animate-run {
+    animation: run 0.5s ease-in-out infinite;
+  }
+  
+  .animate-run-reverse {
+    animation: run 0.5s ease-in-out infinite reverse;
+  }
+}
